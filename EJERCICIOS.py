@@ -19,6 +19,14 @@ Diseña un método que reciba como parámetro 5 números y los retorne en otra l
 
 
 
+def lista_ordenada():
+    lista = [1,5,7,8,9,3]
+
+    lista.sort()
+    print(chr(27)+"[1;33m",lista)
+
+
+
 
 #EJERCICIO 3
 
@@ -118,8 +126,19 @@ def total_vocales():
 
 
 
+#EJERCICIO 7
 
+"""
+Diseña un método que reciba como parámetro una lista de 10 letras, y retorne una lista nueva con el código ASCII de cada letra ingresada.
+"""
 
+def codigo_Ascii():
+    lista = ['a','b','c','d','f','g','h','i','j','k']
+
+    print(chr(27) + "[1;33m" + "Lista de Codigos ASCII  de tu lista \n")
+    for i in lista:
+        print("\033[4;35;47m" , 'Codigo  ASCII de :', i, '\t', 'Es ', ord(i), '\n')
+        #print(str(lista[i]))
 
 
 
@@ -129,4 +148,6 @@ def total_vocales():
 
 #lista_multiplicadora()
 #media_lista()
-total_vocales()
+#total_vocales()
+#lista_ordenada()
+codigo_Ascii()
