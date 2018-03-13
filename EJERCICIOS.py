@@ -142,6 +142,126 @@ def codigo_Ascii():
 
 
 
+#EJERICIO 8
+
+"""
+Diseña un método que reciba como parámetro una lista de 5 números, los almacene en una lista y retorne el menor número.
+"""
+
+def menor_lista_1(lista):
+    menor = lista[0]
+    for valor in lista:
+        if valor < menor:
+            menor = valor
+
+    return ('El numero menor de tu lista es :',menor)
+
+
+
+#EJERCICIO 9
+
+"""
+Diseña un método que reciba como parámetro una lista de 5 números, y retorne la suma del menor número con el mayor número.
+"""
+def suma_lista_numeros(lista):
+    menor = lista[0]
+    mayor = lista[0]
+    for valor in lista:
+        if valor < menor:
+            menor = valor
+        if valor > mayor:
+            mayor = valor
+
+    return ('La suma  de tu lista es :', menor+mayor, 'El numero mayor', mayor, 'El numero menor', menor)
+
+
+#EJERCICIO 10
+
+"""
+Diseña un método que reciba como parámetro una lista de 10 números y retorne una lista sin los números que sean divisibles por 2.
+"""
+
+def lista_divisible(lista):
+    lista_nueva = []
+    contador = 2
+    for i in lista:
+        if (i%contador !=0):
+            lista_nueva = i#REVISAR GUARADADO DE ELEMENTO
+    print("\033[4;35;47m" +'Tus numeros de la lista  que no son divisibles por 2 :')
+    return lista_nueva
+
+
+
+#EJERCICIO 11
+
+"""
+Diseña un método que reciba dos parámetros, el primero es una lista con 10 números y el segundo un número (x) entre 1 y 10.
+ Debe retornar la lista solo con los números que sean divisibles entre el segundo parámetro (x)
+"""
+
+def lista_divisible_dos(lista,x):
+    lista_nueva = []
+    for elemento in lista:
+        if (x == 1):
+             elemento = elemento
+             lista_nueva.append(elemento)
+        if (x == 2):
+            if (elemento%x ==0):
+                elemento = elemento
+                #print(elemento)
+                lista_nueva.append(elemento)
+            #print(chr(27) + "[1;33m" + 'Tus numeros de la lista  que  son divisibles por  :', x)
+        if (x == 3):
+            if (elemento%x ==0):
+                elemento = elemento
+                # print(elemento)
+                lista_nueva.append(elemento)
+        if (x == 4):
+            if (elemento%x ==0):
+                elemento = elemento
+                # print(elemento)
+                lista_nueva.append(elemento)
+        if (x == 5):
+            if (elemento%x ==0):
+                elemento = elemento
+                # print(elemento)
+                lista_nueva.append(elemento)
+        if (x == 6):
+            if (elemento%x ==0):
+                elemento = elemento
+                # print(elemento)
+                lista_nueva.append(elemento)
+        if (x == 7):
+            if (elemento%x ==0):
+                elemento = elemento
+                # print(elemento)
+                lista_nueva.append(elemento)
+        if (x == 8):
+            if (elemento%x ==0):
+                elemento = elemento
+                # print(elemento)
+                lista_nueva.append(elemento)
+        if (x == 9):
+            if (elemento%x ==0):
+                elemento = elemento
+                # print(elemento)
+                lista_nueva.append(elemento)
+        if (x == 10):
+            if (elemento%x ==0):
+                elemento = elemento
+                # print(elemento)
+                lista_nueva.append(elemento)
+
+    return lista_nueva
+
+
+
+
+
+
+
+
+
 
 
 #dos_listas()
@@ -150,4 +270,8 @@ def codigo_Ascii():
 #media_lista()
 #total_vocales()
 #lista_ordenada()
-codigo_Ascii()
+#codigo_Ascii()
+
+lista1 = [20,5,6,4,152,7,3,2]
+x = int(input("Ingresa tu valor x para saber "))
+print (lista_divisible_dos(lista1,x))
