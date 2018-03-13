@@ -186,7 +186,8 @@ def lista_divisible(lista):
     contador = 2
     for i in lista:
         if (i%contador !=0):
-            lista_nueva = i#REVISAR GUARADADO DE ELEMENTO
+            i = i#REVISAR GUARADADO DE ELEMENTO
+            lista_nueva.append(i)
     print("\033[4;35;47m" +'Tus numeros de la lista  que no son divisibles por 2 :')
     return lista_nueva
 
@@ -257,6 +258,74 @@ def lista_divisible_dos(lista,x):
 
 
 
+#EJERCICIO 12
+
+def nueva_lista(lista):
+    lista_nueva = []
+    print("\033[4;35;47m" + 'Lista Original', lista)
+    contador = 2
+    for elemento in lista:
+        if (elemento % contador == 0):
+            elemento = elemento  # REVISAR GUARADADO DE ELEMENTO
+            lista.remove(elemento)
+
+    print()
+    print("\033[4;35;47m" + 'Tus numeros de la lista  que  son divisibles por 2 fueron quitados:')
+    return lista
+
+
+#EJERCICIO 13
+
+
+
+
+
+
+#EJERCICIO 14
+
+"""
+Diseña un método que reciba como parámetro una lista de 10 números, reemplace los múltiplos de 3 por una “x” y retorne misma lista.
+"""
+
+def multiplos_tres(lista):
+
+    divisor = 3
+    indice = 0
+
+    for elemento in lista:
+         if (elemento%divisor ==0):
+            elemento = lista[elemento]#REVISAR ESTA LINEA DE CODIGO
+            lista.insert(elemento, 'x')
+
+    return lista
+
+
+
+
+#EJERCICIO 15
+
+"""
+Diseña un método que reciba como parámetro una lista con 10 números, 
+y retorne una lista nueva con solo los primeros 5 números de la lista original. 
+(el método len() permite saber la cantidad de elementos en una lista).
+
+"""
+
+
+def lista_quince(lista):
+    lista_nueva = []
+
+    contador = lista[0]
+
+
+
+    while (contador < lista.index(4)):
+        contador = contador
+        lista_nueva.append(contador)
+    return lista_nueva
+
+
+
 
 
 
@@ -272,6 +341,6 @@ def lista_divisible_dos(lista,x):
 #lista_ordenada()
 #codigo_Ascii()
 
-lista1 = [20,5,6,4,152,7,3,2]
-x = int(input("Ingresa tu valor x para saber "))
-print (lista_divisible_dos(lista1,x))
+lista1 = [20,5,6,4,152,7,3,2,11]
+#x = int(input("Ingresa tu valor x para saber "))
+print (lista_quince(lista1))
