@@ -1,12 +1,34 @@
-
-
 #EJERCICIO 1
 
 """
 Diseña un método que reciba como parámetro una lista de 5 números
 y retorne una lista con la suma, resta, multiplicación y división de todos.
 """
+def operaciones_lista(numeros):
+    """
+    (num[]) -> num[]
+    reciba como parámetro una lista de 5 números y retorne una lista
+    con la suma, resta, multiplicación y división de todos.
+    >>> operaciones_lista([1,1,1,1,1])
+    [5, -3, 1, 1]
 
+    :param numeros: Lista con 5 numeros
+    :return: lista con suma resta...
+    """
+    resultados = []
+    resultados.append(numeros[0] + numeros[1]
+                      + numeros[2] + numeros[3]
+                      + numeros[4])
+    resultados.append(numeros[0] - numeros[1]
+                      - numeros[2] - numeros[3]
+                      - numeros[4])
+    resultados.append(numeros[0] * numeros[1]
+                      * numeros[2] * numeros[3]
+                      * numeros[4])
+    resultados.append(numeros[0] // numeros[1]
+                      // numeros[2] // numeros[3]
+                      // numeros[4])
+    return resultados
 
 
 
@@ -18,6 +40,41 @@ Diseña un método que reciba como parámetro 5 números y los retorne en otra l
 """
 
 
+
+#TEST DRIVE
+
+def lista_ordenada(num1,num2,num3,num4):
+    """
+    (num[]) -> num[]
+    reciba como parámetro una lista de 5 números y retorne una lista
+    con la suma, resta, multiplicación y división de todos.
+    >>> lista_ordenada(num1,num2,num3,num4)
+    [5,4,1,1,9]
+    >>> lista_ordenada(num1,num2,num3,num4)
+    [5,12,5,3,5]
+    >>> lista_ordenada(num1,num2,num3,num4)
+    [5,5,9,4,4]
+
+    :param numeros: Lista con 5 numeros
+    :return: lista lista ordenados de forma ascendente...
+    """
+    return sorted(num1,num2,num3,num4)
+
+#TEST DRIVE
+
+#IMPLEMENTS TEST DRIVE
+
+from unittest import TestCase
+
+
+class TestLista_ordenada(TestCase):
+    def test_lista_ordenada(self):
+        lista = [1, 5, 7, 8, 9, 3]
+
+        lista.sort()
+        print(chr(27) + "[1;33m", lista)
+
+#IMPLEMENTS TEST DRIVE
 
 def lista_ordenada():
     lista = [1,5,7,8,9,3]
@@ -36,6 +93,9 @@ Diseña un método que reciba como parámetro dos listas,
 """
 
 def dos_listas():
+
+
+
     lista1 = []
     lista2 = []
     listatotal = []
@@ -308,7 +368,6 @@ def multiplos_tres(lista):
 Diseña un método que reciba como parámetro una lista con 10 números, 
 y retorne una lista nueva con solo los primeros 5 números de la lista original. 
 (el método len() permite saber la cantidad de elementos en una lista).
-
 """
 
 
