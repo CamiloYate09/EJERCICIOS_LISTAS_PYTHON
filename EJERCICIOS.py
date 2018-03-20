@@ -350,12 +350,15 @@ Diseña un método que reciba como parámetro una lista de 10 números, reemplac
 def multiplos_tres(lista):
 
     divisor = 3
-    indice = 0
+    
+    lista_resultado = []
 
     for elemento in lista:
          if (elemento%divisor ==0):
-            elemento = lista[elemento]#REVISAR ESTA LINEA DE CODIGO
-            lista.insert(elemento, 'x')
+            lista_resultado.append('x')
+            
+         else:
+             lista_resultante.append(elemento)
 
     return lista
 
