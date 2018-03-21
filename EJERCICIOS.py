@@ -391,7 +391,30 @@ def lista_quince(lista):
 
 
 
+#EJERCICIOS DE LA CLASE 20 DE MARZO DE 2018
+# TRES EJERICIOS 
 
+def escalar(esclar, lista):
+    """
+    (lista[], Escalar -> Lista[])
+
+    Parametro Una funcion que calcule un producto escalar de una lista
+
+    >>> escalar (2,[1,1,1,1])
+    [2, 2, 2, 2]
+
+    :param:La funcion recibe una lista de numeros y un escalar
+
+    :return:Al avaluar una funcion con la lista y el esclar  nos retorma un vector nuevo
+    """
+
+
+    lista_nueva = []
+
+    for i in lista:
+        lista_nueva.append(i*esclar)
+
+    return lista_nueva
 
 
 
