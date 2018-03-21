@@ -416,6 +416,28 @@ def escalar(esclar, lista):
 
     return lista_nueva
 
+#################EJERCICIO 2
+def suma_vector(vector1,vector2):
+    """
+    (lista[],lista[] -> lista[])
+    Funcion que calcule la suma de dos vectores -> Mensaje Arroje un error si no se puede realizar la operacion
+
+    >>> suma_vector([1,2,3,4],[5,6,7,8])
+    [6, 8, 10, 12]
+
+    :param vector1 ,vector2:
+    :return: Vectos_nuevo = vector1 + vector2
+    """
+    lista_nueva = []
+
+    for i in vector1:
+        for j in vector2:
+            lista_nueva.append(i+j)
+
+    return  lista_nueva
+
+##fUNCION QUE CALCULE EL PRODUCTO PUNTO DE DOS VECTORES -> Mensaje Arroje un error si no se puede realizar la operacion
+
 
 
 #dos_listas()
